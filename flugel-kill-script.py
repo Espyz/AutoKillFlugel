@@ -18,7 +18,7 @@ keyboard.on_press_key("z", lambda e: toggle_mouse_movement() if keyboard.is_pres
 
 print("Программа запущена. Нажмите Alt+Z для включения/выключения движения мыши. Убедитесь, что на вашем дк нагруднике 200% верт.ускорение и авт.вкл.полета")
 print("Для выхода полностью закройте программу")
-iter=0
+iter=1
 # print(pyautogui.KEY_NAMES)
 # Основной цикл
 
@@ -55,7 +55,7 @@ while True:
             pyautogui.write('@alfheim', interval=0.1)
             pyautogui.moveRel(-170, 115, duration=0.3)
             pyautogui.keyDown('shift')
-            pyautogui.click(clicks=2, interval=0.1)
+            pyautogui.click(clicks=1, interval=0.1)
             pyautogui.keyUp('shift')
             pyautogui.press('esc')
 
