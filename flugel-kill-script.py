@@ -21,10 +21,12 @@ print("Для выхода полностью закройте программ�
 iter=0
 # print(pyautogui.KEY_NAMES)
 # Основной цикл
+
+# time.sleep(20)
 while True:
     if running:
         # Убиваем Флюгелей
-        pyautogui.moveRel(0, -5000, duration=0.35)
+        pyautogui.moveRel(0, -5000, duration=0.32)
         for i in range (1, 8):
             pyautogui.press(str(i))
             pyautogui.click(clicks=8, interval=0.1)
@@ -49,13 +51,20 @@ while True:
 
         # Убираем сломавшуюся душу
         if ((iter > 1) and iter % 2 == 1):
-            pyautogui.moveRel(3000, 0, duration=0.3)
-            pyautogui.press('9')
-            pyautogui.press('q')
-            pyautogui.moveRel(-3000, 0, duration=0.3)
+            #Попытка удалять через терминал
+            pyautogui.press(str(8))
+            pyautogui.click(button='right', duration=0.1)
+            pyautogui.moveRel(110, 410, duration=0.3)
+            pyautogui.click(duration=0.1)
+            pyautogui.moveRel(-120, -140, duration=0.3)
+            pyautogui.click(duration=0.1)
+            pyautogui.moveRel(17, -17, duration=0.3)
+            pyautogui.click(duration=0.1)
+            pyautogui.press('esc')
+
 
         # Спавн Флюгелей
-        pyautogui.moveRel(0, 5000, duration=0.35)
+        pyautogui.moveRel(0, 5000, duration=0.32)
         pyautogui.press('9')
         pyautogui.keyDown('shift')
         pyautogui.click(clicks=7, interval=1, button='right')
